@@ -39,7 +39,7 @@ def generate_qr_with_logo(url: str, logo_path: str, output: str = "qr_output.png
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a QR code with an embedded logo.")
     parser.add_argument("url", help="The URL or data to encode in the QR code")
-    parser.add_argument("logo", nargs="?", default="fgb_icon.png", help="Path to the image to embed in the center (default: fgb_icon.png)")
+    parser.add_argument("logo", help="Path to the image to embed in the center")
     parser.add_argument("-o", "--output", default="qr_output.png", help="Output file path (default: qr_output.png)")
     args = parser.parse_args()
 
